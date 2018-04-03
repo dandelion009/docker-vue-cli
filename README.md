@@ -1,27 +1,18 @@
-# About
+# tmp
 
-This container will have the items necessary to run the vue-cli.
+> A Vue.js project
 
-# Using this container
+## Build Setup
 
-In your .bashrc, .zshrc, or similar file include aliases for the
-following commands:
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
 ```
-alias vue='docker run -it --rm -v "$PWD":"$PWD" -w "$PWD"  -u "$(id -u)" ebiven/vue-cli vue'
-```
 
-
-Using this via docker-compose:
-
-```
-version: '2'
-services:
-  web:
-    image: ebiven/vue-cli
-    command: npm run dev
-    volumes:
-      - .:/code
-    ports:
-      - "8080:8080"
-```
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
